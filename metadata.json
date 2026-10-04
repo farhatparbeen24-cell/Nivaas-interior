@@ -1,0 +1,6 @@
+{
+  "name": "Nivaas Interiors | Interior Design Studio",
+  "description": "Design-led interior studio in Bhubaneswar turning homes into stories with fixed timelines, itemised costs, and a 10-year warranty.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

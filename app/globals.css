@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --lime: #E5FF6E;
+    --lime-deep: #D4F04F;
+    --ink: #111111;
+    --ink-2: #1A1A1A;
+    --ink-3: #262626;
+    --white: #FFFFFF;
+    --blue: #2330F5;
+    --blue-ink: #2A2AA8;
+    --text-on-lime: #3A3F1F;
+    --muted-dark: #8A8A8A;
+    --muted-light: #6B6B6B;
+    --border-light: #E6E6E6;
+    --border-dark: #2A2A2A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--ink);
+    color: var(--white);
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.03em;
+  }
+}
+
+/* Custom Design Tokens & Classes */
+.bg-lime-brand {
+  background-color: #E5FF6E;
+}
+.bg-lime-deep {
+  background-color: #D4F04F;
+}
+.text-lime-brand {
+  color: #E5FF6E;
+}
+.bg-ink-1 {
+  background-color: #111111;
+}
+.bg-ink-2 {
+  background-color: #1A1A1A;
+}
+.bg-ink-3 {
+  background-color: #262626;
+}
+.text-ink-1 {
+  color: #111111;
+}
+.text-ink-2 {
+  color: #1A1A1A;
+}
+.text-brand-blue {
+  color: #2330F5;
+}
+.bg-brand-blue {
+  background-color: #2330F5;
+}
+.border-dark-line {
+  border-color: #2A2A2A;
+}
+.border-light-line {
+  border-color: #E6E6E6;
+}
+.text-muted-dark {
+  color: #8A8A8A;
+}
+.text-muted-light {
+  color: #6B6B6B;
+}
+
+/* Current Style Grid Textures */
+.bg-dark-grid {
+  background-size: 60px 60px;
+  background-image:
+    linear-gradient(to right, rgba(42, 42, 42, 0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(42, 42, 42, 0.45) 1px, transparent 1px);
+}
+
+.bg-light-grid {
+  background-size: 60px 60px;
+  background-image:
+    linear-gradient(to right, rgba(230, 230, 230, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(230, 230, 230, 0.5) 1px, transparent 1px);
+}
+
+/* Hero card glow border */
+.mockup-glow {
+  box-shadow: 0 0 0 6px rgba(212, 240, 79, 0.4);
+}
+
+/* Floating animation */
+@keyframes slowFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+.animate-float-slow {
+  animation: slowFloat 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: slowFloat 7s ease-in-out infinite 1.5s;
+}
+
+.animate-float-alt {
+  animation: slowFloat 5.5s ease-in-out infinite 0.75s;
+}
+
+/* Selection */
+::selection {
+  background-color: #E5FF6E;
+  color: #111111;
+}
